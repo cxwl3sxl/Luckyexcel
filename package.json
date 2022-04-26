@@ -1,6 +1,6 @@
 {
   "name": "luckyexcel-pj",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An excel import and export library adapted to Luckysheet",
   "main": "dist/luckyexcel.cjs.js",
   "module": "dist/luckyexcel.esm.js",
