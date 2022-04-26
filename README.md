@@ -9,7 +9,7 @@ import LuckyExcel from "luckyexcel-pj";
 
  LuckyExcel.transformExcelToLuckyByUrl("url","name")
  .then((data) => {
-     //data格式: {exportJson:"", luckysheetfile:"", binaryData:""}
+     //data格式: {files: exportJson, fs: luckysheetfile, binaryData: binaryData}
      //exportJson和luckysheetfile为原参数，binaryData为新增的参数url对应的二进制数据
  })
  .catch((e) => {
