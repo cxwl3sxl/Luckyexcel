@@ -7,6 +7,7 @@
         "noImplicitAny": true,
         "target": "ES5",
         "outDir": "output/",
+        //"lib": ["ES2015", "DOM"],
         "esModuleInterop": true,
         "module": "commonjs"
     },
