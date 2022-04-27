@@ -52,7 +52,8 @@ export class HandleZip {
         var new_zip: JSZip = new JSZip();
         getBinaryContent(url, function (err: any, data: any) {
             if (err) {
-                throw err; // or handle err
+                errorFunc(err);
+                return;
             }
 
             JSZip.loadAsync(data).then(function (zip: any) {
