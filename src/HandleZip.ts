@@ -56,6 +56,7 @@ export class HandleZip {
                 return;
             }
 
+            let binData = data;
             JSZip.loadAsync(data).then(function (zip: any) {
                 let fileList: IuploadfileList = <IuploadfileList>{}, lastIndex: number = Object.keys(zip.files).length, index: number = 0;
                 zip.forEach(function (relativePath: any, zipEntry: any) {  // 2) print entries
@@ -76,7 +77,7 @@ export class HandleZip {
                         fileList[zipEntry.name] = data;
                         // console.log(lastIndex, index);
                         if (lastIndex == index + 1) {
-                            successFunc(fileList, data);
+                            successFunc(fileList, binData);
                         }
                         index++;
                     });
