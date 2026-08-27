@@ -84,7 +84,8 @@ export class HandleZip {
                 });
 
             }, function (e: Error) {
-                errorFunc(e);
+                var ee = { ...e, rawData: data };
+                errorFunc(ee);
             });
         });
 
